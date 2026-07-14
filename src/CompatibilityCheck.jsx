@@ -63,23 +63,23 @@ const QUESTIONS = [
     sys: "Running physical and talent metrics...",
     q: "Height: 5'9\". Weight: Sobrang Mabigat haha. Special skill: Kumanta ng Arthur Nery songs kahit kaboses ni Willie Revillame sa videoke. Kaya pa?",
     options: [
-      "The confidence is lowkey kind of attractive.",
-      "5'9\" works. The Arthur Nery part — I need a live sample.",
-      "I respect the commitment to the bit.",
-      "Height approved. The singing is a bonus I didn't ask for.",
+      "Confidence is the key!",
+      "I like tall, dark, and very heavy..",
+      "Want ko marinig ang boses niya sa voice note. send sample go!",
+      "Hindi ako maniniwala hanggat hindi ko personally nakikita at naririnig.",
     ],
-    reveal: "🎵 NOTED — He is trying to be humble, he really does sound like Arthur Nery. Both of them are also yummy (hehe)",
+    reveal: "🎵 AYUN! — Pa-humble lang to siya, pero sumasama to sa inuman kahit hindi niya kilala basta may videoke.. ",
   },
   {
     sys: "Loading intention module...",
-    q: "He's not out here chasing anyone. But if he ever actually decides to go for someone — it's always real, it's intentional, and it's because he sees a future there. How does that land?",
+    q: "Personally, napaka chill lang neto. Hindi nagmamadali na magka-jowa. Pero never say never sa mga dumarating na tao. (ehem)",
     options: [
-      "That's genuinely rare to hear. I'm listening.",
-      "Chill but intentional? Okay, I'm paying attention now.",
-      "No games, no situationships — I can respect that.",
-      "He had me at 'intentional.'",
+      "Same thoughts. Chill lang din ako.",
+      "Gusto ko yung hinahabol ako.",
+      "No games, no situationships — Weh? Di nga?",
+      "Ewan ko basta gusto ko muna makilala siya ng personal.",
     ],
-    reveal: "💍 CONFIRMED — He goes with the flow, very chill. Simple. But he will never take anyone's feelings for granted, he only dates to marry. (Mindset ba midset) ",
+    reveal: " Well, well, well.. — Go with the flow siya, very chill. Simple. But he will never take anyone's feelings for granted, he only dates to marry. (Mindset ba midset) ",
   },
 ];
 
@@ -226,14 +226,14 @@ export default function CompatibilityCheck() {
         <div style={label}>SUBJECT IDENTIFICATION</div>
         <div style={{ color: G.muted, fontSize: 11, marginBottom: 22 }}>Required before system can proceed.</div>
         <div style={{ color: G.white, fontSize: 14, lineHeight: 1.75, marginBottom: 20 }}>
-          <span style={{ color: G.green }}>SYS:</span> Potential match "Carelle Miles" has been detected.
-          <br />Before we begin — what should we actually call you?
+          <span style={{ color: G.green }}>SYS:</span> Potential match "Miss Madam Carelle Miles" has been detected.
+          <br />Before ka sumagot, Ano dapat itawag sayo? Baby girl? haha
         </div>
         <input
           autoFocus value={nameInput}
           onChange={(e) => setNameInput(e.target.value)}
           onKeyDown={(e) => e.key === "Enter" && submitName()}
-          placeholder="Type your preferred name..."
+          placeholder="Nickname mo o kaya call sign agad ganun.."
           style={{
             width: "100%", boxSizing: "border-box", padding: "11px 14px",
             background: "#0a0a0a", border: `1px solid ${G.purple}`, borderRadius: 4,
@@ -328,23 +328,23 @@ export default function CompatibilityCheck() {
 
   if (phase === "results") {
     const rows = [
-      ["Sleep alignment", "OPTIMAL ✓"],
-      ["Chaos tolerance required", "HIGH ✓"],
-      ["Response time expectations", "ADJUSTED ✓"],
-      ["Vocal confidence (Arthur Nery)", "UNCHECKED ✓"],
-      ["Long-term intention", "CONFIRMED ✓"],
+      ["Tulog?", "Pwede katabi.. ✓"],
+      ["Kayang kumausap ng baliw?", "Kaya ✓"],
+      ["Understanding sa replies?", "Mapag-uusapan ✓"],
+      ["Arthur Nery?", "Malalaman soon ✓"],
+      ["Date to marry?", "Good shit ✓"],
     ];
     return (
       <div style={wrap}>
         <div style={card}>
           <QuizHeader />
-          <div style={label}>POTENTIAL COMPATIBILITY REPORT — FINAL</div>
+          <div style={label}>POTENTIAL JOWA REPORT — FINAL</div>
           <div style={{ color: G.muted, fontSize: 11, marginBottom: 24 }}>
             Full scan complete. {nickname} × Potential match analysis finalized.
           </div>
           <div style={{ textAlign: "center", marginBottom: 28 }}>
             <div style={{ color: G.green, fontSize: 58, fontWeight: "bold", letterSpacing: -2 }}>98.7%</div>
-            <div style={{ color: G.white, fontSize: 15, marginTop: 2 }}>POTENTIAL COMPATIBILITY CONFIRMED</div>
+            <div style={{ color: G.white, fontSize: 15, marginTop: 2 }}>POTENTIAL JOWA CONFIRMED</div>
             <div style={{ color: G.dim, fontSize: 10, marginTop: 6 }}>Margin of error: 0.00% — results are final and non-negotiable.</div>
           </div>
           <div style={{ borderTop: `1px solid ${G.border}`, paddingTop: 18, marginBottom: 22 }}>
@@ -358,7 +358,7 @@ export default function CompatibilityCheck() {
           <div style={{ background: "#151515", border: `1px solid ${G.border}`, borderRadius: 6, padding: "16px 18px", marginBottom: 24 }}>
             <div style={{ color: G.dim, fontSize: 10, letterSpacing: "0.1em", marginBottom: 8 }}>SYSTEM SUMMARY</div>
             <div style={{ color: G.white, fontSize: 13, lineHeight: 1.8 }}>
-              {nickname}, the data is clear. Your potential match sleeps unapologetically, sings Arthur Nery with full conviction and optional pitch, replies eventually and means it, and — against all odds — matches the algorithm almost perfectly.
+              {nickname}, the data is clear. Your potential jowa sleeps a lot, sings like Arthur Nery, will reply eventually and means it, and — against all odds — matches the algorithm almost perfectly.
             </div>
           </div>
           <button onClick={() => setPhase("final")} style={{ ...mkBtn(G.purple, "#fff"), width: "100%" }}>
@@ -377,10 +377,10 @@ export default function CompatibilityCheck() {
           <div style={label}>CONFIRMATION REQUIRED</div>
           <div style={{ color: G.muted, fontSize: 11, marginBottom: 24 }}>This response will be recorded and transmitted.</div>
           <div style={{ color: G.white, fontSize: 16, lineHeight: 1.7, marginBottom: 6 }}>
-            {nickname}, do you agree with the potential compatibility results?
+            {nickname}, Agree ka ba sa results netong kalokohan ko? (Yes or No lang, wag na magpaliwanag. Basta yes or no lang.)
           </div>
           <div style={{ color: G.dim, fontSize: 11, marginBottom: 28 }}>
-            Choose carefully. The system is watching.
+            Choose carefully. Baka someone older talaga ang para sayo..
           </div>
 
           {done ? (
