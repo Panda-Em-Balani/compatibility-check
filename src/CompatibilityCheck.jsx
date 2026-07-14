@@ -332,7 +332,7 @@ export default function CompatibilityCheck() {
       ["Kayang kumausap ng baliw?", "Kaya ✓"],
       ["Understanding sa replies?", "Mapag-uusapan ✓"],
       ["Arthur Nery?", "Malalaman soon ✓"],
-      ["Date to marry?", "Good shit ✓"],
+      ["Date to marry?", "Hmmm ✓"],
     ];
     return (
       <div style={wrap}>
