@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import emailjs from "@emailjs/browser";
 
 const MY_EMAIL = "balani.emmanuel99@gmail.com"; // 👈 CHANGE THIS
 
@@ -153,14 +154,34 @@ export default function CompatibilityCheck() {
 
   const clickYes = () => triggerEmail("YES ✓");
 
-  const triggerEmail = (answer) => {
-    const sub = encodeURIComponent("Compatibility Check — Final Answer");
-    const bod = encodeURIComponent(
-      `Hey Emmanuel,\n\n${nickname} has completed the potential compatibility check.\n\nFinal answer: ${answer}\n\nYou're welcome. The rest is up to you.\n\n— CompatibilityOS v2.1.4`
-    );
-    window.open(`mailto:${MY_EMAIL}?subject=${sub}&body=${bod}`, "_blank");
+const triggerEmail = (finalAnswer) => {
+
+  const formattedAnswers = QUESTIONS.map((question, index) => {
+    return `${index + 1}. ${question.q}
+Answer: ${question.options[answers[index]]}
+`;
+  }).join("\n");
+
+  emailjs.send(
+    "service_pu5ibd7",
+    "template_869ecyv",
+    {
+      nickname: nickname,
+      final_answer: finalAnswer,
+      answers: formattedAnswers,
+    },
+    "hGROcbeE8Gn5KzXr4"
+  )
+  .then(() => {
+    alert("Thank you! Your answers have been submitted.");
     setDone(true);
-  };
+  })
+  .catch((error) => {
+    console.error(error);
+    alert("Something went wrong sending the results.");
+  });
+
+};
 
   const G = {
     bg: "#0d0d0d", card: "#111", border: "#1f1f1f",
